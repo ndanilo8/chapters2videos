@@ -1,5 +1,5 @@
 # Original source by Kyle Howells at https://ikyle.me/blog/2020/add-mp4-chapters-ffmpeg
-# Modified/fixed by Danilo Nascimento at blablabla
+# Modified by Danilo Nascimento at https://github.com/ndanilo8/chapters2videos
 # 
 # Usage Steps:
 # Extract Metadata from your file by: ffmpeg -i INPUT.mp4 -f ffmetadata FFMETADATAFILE.txt
@@ -18,7 +18,6 @@ chapters = list()
 
 with open('chapters.txt', 'r') as f:
    for line in f:
-      #re.match(r"(\d):(\d{2}):(\d{2}) (.*)", line)
       x = re.match(r"(\d{2}):(\d{2}):(\d{2}) (.*)", line)
       hrs =  int(x.group(1))
       mins = int(x.group(2))
