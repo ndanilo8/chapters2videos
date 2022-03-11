@@ -2,9 +2,9 @@
 Simple yet useful script setup to add custom chapters to your personal videos or downloaded ones... 
 
 ## Usage Steps:
-Extract Metadata from your file by: ```ffmpeg -i INPUT.mp4 -f ffmetadata FFMETADATAFILE.txt```
-Run the following script by: ```python addChapters.py```
-Finishing by adding the chaprters: ```ffmpeg -i INPUT.mp4 -i FFMETADATAFILE -map_metadata 1 -codec copy OUTPUT.mp4```
+- Extract Metadata from your file by: ```ffmpeg -i INPUT.mp4 -f ffmetadata FFMETADATAFILE.txt```
+- Run the following script by: ```python addChapters.py```
+- Finishing by adding the chaprters: ```ffmpeg -i INPUT.mp4 -i FFMETADATAFILE -map_metadata 1 -codec copy OUTPUT.mp4```
 ### Considerations:
 - Your video needs to be named INPUT.mp4 or just change the commands accordingly
 - You'll need Python and ffmpeg library installed on your system and configured in PATH
